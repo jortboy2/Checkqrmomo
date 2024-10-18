@@ -14,8 +14,9 @@ function App() {
   const [error, seteError] = useState();
   const formattedDate = `${year}-${month}-${day}`;
   const loginAndGetAmount = async (username) => {
+    
     const getmerchant =
-      "/api/profile/v2/merchants?requestType=LOGIN_MERCHANTS&language=vi";
+      "https://business.momo.vn/api/profile/v2/merchants?requestType=LOGIN_MERCHANTS&language=vi";
     axios.defaults.headers.post["Content-Type"] =
       "application/x-www-form-urlencoded";
     const data = {
@@ -24,13 +25,11 @@ function App() {
     };
     try {
       const response = await axios.post(
-        "/api/authentication/login?language=vi",
+        "https://business.momo.vn/api/authentication/login?language=vi",
         data,
         {
           headers: {
-            "Cache-Control": "no-cache",
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Access-Control-Allow-Origin": "*",
+            "mode": "cors"
           },
         }
       );
@@ -44,7 +43,7 @@ function App() {
       const brandName =
         merchantResponse.data.data.merchantResponseList[0].brandName;
       const transactionData = await axios.get(
-        `api/transaction/v2/transactions/statistics?pageSize=10&pageNumber=0&fromDate=${
+        `https://business.momo.vn/api/transaction/v2/transactions/statistics?pageSize=10&pageNumber=0&fromDate=${
           ActiveDay === "AllDay" ? firstDay : formattedDate
         }T00%3A00%3A00.00&toDate=${
           ActiveDay === "AllDay" ? lastDay : formattedDate
