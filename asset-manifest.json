@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/checkqrmomo/static/css/main.b4f41487.css",
+    "main.js": "/checkqrmomo/static/js/main.7dbdf1e8.js",
+    "static/js/453.71dcffa1.chunk.js": "/checkqrmomo/static/js/453.71dcffa1.chunk.js",
+    "index.html": "/checkqrmomo/index.html",
+    "main.b4f41487.css.map": "/checkqrmomo/static/css/main.b4f41487.css.map",
+    "main.7dbdf1e8.js.map": "/checkqrmomo/static/js/main.7dbdf1e8.js.map",
+    "453.71dcffa1.chunk.js.map": "/checkqrmomo/static/js/453.71dcffa1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4f41487.css",
+    "static/js/main.7dbdf1e8.js"
+  ]
+}
