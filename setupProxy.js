@@ -1,6 +1,10 @@
-const { createProxyMiddleware } = require('http-proxy-middleware');
+const { createProxyMiddleware } = require("http-proxy-middleware");
 
-const apiProxy = createProxyMiddleware({
-  target: 'https://business.momo.vn',
-  changeOrigin: true,
-});
+module.exports = (app) => {
+  app.use(
+    createProxyMiddleware({
+      target: "https://business.momo.vn",
+      changeOrigin: true,
+    })
+  );
+};
