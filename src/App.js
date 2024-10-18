@@ -15,6 +15,7 @@ function App() {
   const formattedDate = `${year}-${month}-${day}`;
   const loginAndGetAmount = async (username) => {
     const getmerchant = "/api/profile/v2/merchants?requestType=LOGIN_MERCHANTS&language=vi";
+    axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
     const data = {
       username: username,
       password: password,
